@@ -68,7 +68,7 @@ function ProfilePage() {
               </div>
               <Button
                 onClick={handleLogout}
-                className="mt-6 border-0 rounded-full bg-[#59A0B8] hover:bg-[#0b428b]  text-white px-14 py-2 font-semibold text-sm"
+                className="mt-6 border-0 rounded-full bg-[#bd9229] hover:bg-[#0b428b]  text-white px-14 py-2 font-semibold text-sm"
               >
                 Logout
               </Button>
@@ -96,7 +96,7 @@ function ProfilePage() {
                   />
                 </div>
               </div>
-              <Button className="mt-16 border-0 mb-5 rounded-full bg-[#59A0B8]  hover:bg-[#0b428b] text-white px-14 py-2 font-semibold text-sm">
+              <Button className="mt-16 border-0 mb-5 rounded-full bg-[#bd9229]  hover:bg-[#0b428b] text-white px-14 py-2 font-semibold text-sm">
                 Save
               </Button>
             </Box>
