@@ -142,8 +142,8 @@ function AddCategory() {
       <DashboardNavbar />
       <div class=" mt-24 absolute lg:left-[260px]  z-5">
         <Container>
-          <h2 class="font-bold text-xl">Main Category</h2>
-          <p class="font-bold mt-4">Add New Category</p>
+          <h2 class="font-bold text-xl">Main Collection</h2>
+          <p class="font-bold mt-4">Add New Collection</p>
           <Form sm={12}>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="" sm={6}>
@@ -351,7 +351,7 @@ function AddCategory() {
                 </Form.Select>
               </Form.Group>
 
-              <Form.Group as={Col} controlId="">
+              {/* <Form.Group as={Col} controlId="">
                 <Form.Label class="text-[#707070] font-semibold py-2">
                   Available For Wholesale
                 </Form.Label>
@@ -364,7 +364,7 @@ function AddCategory() {
                   <option value={"true"}>Yes</option>
                   <option value={"false"}>No (Upgrade Plan)</option>
                 </Form.Select>
-              </Form.Group>
+              </Form.Group> */}
             </Row>
 
             <Row>

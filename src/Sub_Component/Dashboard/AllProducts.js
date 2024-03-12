@@ -201,7 +201,7 @@ function AllProducts() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Select Category
+            Select Collection
           </button>
           <ul className="dropdown-menu" aria-labelledby="categoryDropdown">
             {allCategories?.map((cat) => (

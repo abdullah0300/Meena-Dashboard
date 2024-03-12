@@ -751,7 +751,7 @@ function AddProduct() {
                   <Row className="mb-3 lg:px-16 mt-3">
                     <Form.Group as={Col} controlId="">
                       <Form.Label class="text-[#707070] font-semibold py-2">
-                        Select Category
+                        Select Collection
                       </Form.Label>
                       <Form.Select
                         aria-label="Default select example"
@@ -790,7 +790,7 @@ function AddProduct() {
                       />
                     </Form.Group>
 
-                    <Form.Group
+                    {/* <Form.Group
                       as={Col}
                       controlId=""
                       md={4}
@@ -836,7 +836,7 @@ function AddProduct() {
                           </option>
                         ))}
                       </Form.Select>
-                    </Form.Group>
+                    </Form.Group> */}
                   </Row>
 
                   <Row className="mb-3 lg:px-16 mt-3">
@@ -1116,7 +1116,7 @@ function AddProduct() {
                       </Button>
                     </Form.Group>
 
-                    <span className="mt-3 mb-0">
+                    {/* <span className="mt-3 mb-0">
                       <h1>
                         Flavours (
                         {finalFlavoursObjArray?.map((flav) => (
@@ -1223,7 +1223,7 @@ function AddProduct() {
                       >
                         Confirm Choice
                       </Button>
-                    </Form.Group>
+                    </Form.Group> */}
 
                     <label class="text-[#707070] font-semibold py-2">
                       Description
