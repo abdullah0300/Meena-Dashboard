@@ -83,7 +83,7 @@ function DashboardNavbar({ setQuery, handleSearchClick, query }) {
                   />
                 </span>
                 <span>
-                  {/* <img
+                  <img
                     height="30px"
                     width="32px"
                     //   class="py-3"
@@ -93,7 +93,7 @@ function DashboardNavbar({ setQuery, handleSearchClick, query }) {
                       e.preventDefault();
                       nav("/dashboard/profile");
                     }}
-                  /> */}
+                  />
                 </span>
               </Navbar.Brand>
 
