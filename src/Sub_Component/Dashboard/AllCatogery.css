@@ -1,0 +1,62 @@
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    background-color: #d2eff1 !important;
+}
+
+.addbutton{
+    border: none;
+
+}
+
+.category-image {
+    width: 100%;
+    transition: ease-in-out 0.3s;
+}
+
+.category-image:hover {
+    transform: translateY(-1px) scale(1.05);
+}
+
+.overlay-buttons {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    gap: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay-buttons {
+    opacity: 1;
+}
+
+.delete-icon {
+
+    font-size: 52px;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button {
+    font-size: 25px;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-icon {
+    background-color: #e74c3c !important;
+}
+
+.edit-button {
+    background-color: #bd9229 !important;
+}

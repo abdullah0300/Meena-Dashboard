@@ -1,0 +1,304 @@
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  /* background: #eee; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 20px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar  */
+nav {
+  /* position: fixed; */
+  /* position: sticky; */
+  /* top:0; */
+  width: 100%;
+  /* padding-top: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 10rem; */
+}
+
+nav.a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+button.btn-close:hover {
+  box-shadow: none;
+  scale: 1.2;
+}
+button.btn-close:focus {
+  box-shadow: none;
+}
+
+.dropdown-menu show {
+  border: 0;
+}
+.navbar-nav .dropdown-menu {
+  position: static;
+  border: none;
+  margin: 0px 0px 0px -55px;
+}
+
+#menuWidth {
+  width: 20%;
+  position: fixed;
+}
+
+@media screen and (max-width: 900px) and (max-width: 800px),
+  (max-width: 700px),
+  (max-width: 1000px) {
+  #menuWidth {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 500px) {
+  #menuWidth {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 400px) and (max-width: 400px){
+  #menuWidth {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 300px) and (max-width: 300px){
+  #menuWidth {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 500px) {
+  #menuWidth {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 660px) {
+  #menuWidth {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 660px) and (max-width: 663px) {
+  #menuWidth {
+    width: 50%;
+  }
+}
+
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after {
+  border: none;
+  color: #000;
+}
+
+#filled-basic,
+#text {
+  background: white;
+  background-color: white;
+  border-radius: none;
+  border: 1px solid black;
+  color: black;
+  border-radius: 0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border: 1px solid grey;
+}
+#filled-basic:hover,
+#text:hover {
+  background: white;
+  background-color: white;
+  border-radius: none;
+  border: 1px solid black;
+  color: black;
+  border-radius: 0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+#filled-basic:focus,
+#text:focus {
+  background: white;
+  background-color: white;
+  border-radius: none;
+  border: 1px solid black;
+  color: black;
+  border-radius: 0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+#filled-basic::after,
+#text::after {
+  background: white;
+  background-color: white;
+  border-radius: none;
+  border: 1px solid black;
+  color: black;
+  border-radius: 0;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after {
+  border: none;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  /* CSS styles for medium-sized screens */
+  .my-element:hover {
+    pointer-events: none;
+  }
+}
+
+#navbar {
+  position: relative;
+  z-index: 2;
+}
+#slider_image {
+  position: relative;
+  z-index: 0;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: none;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: none;
+  border-color: #bdbdbd;
+}
+
+.form-select.is-valid:not([multiple]):not([size]),
+.form-select.is-valid:not([multiple])[size="1"],
+.was-validated .form-select:valid:not([multiple]):not([size]),
+.was-validated .form-select:valid:not([multiple])[size="1"] {
+  background-image: none;
+  border-color: #bdbdbd;
+}
+
+
+#trade{
+  margin-top: -3px;
+}
+
+
+/* .banner{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: center;
+}
+.content{
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 60%;
+  padding-left: 30px;
+  transform: translateY(-50%);
+  text-align: start;
+}
+.content h1{
+
+  font-weight: 700;
+  margin-top: 170px;
+}
+.banner video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+/* .banner img{
+  float: right;
+  display: none;
+  width: 380px;
+  height: 515px;
+} */
+
+/* @media(min-aspect-ratio: 16/9){
+  .banner video{
+    width: 100%;
+    height: auto;
+  }
+  .banner img{
+    display: block;
+    width: 380px;
+    height: 515px;
+  }
+} */
+
+#smokeVedio{
+  height: 585px;
+}
+
+#img1{
+  height: 450px;
+  margin-top: -450px;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  height: 300px;
+  width: 990px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.button-container:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+

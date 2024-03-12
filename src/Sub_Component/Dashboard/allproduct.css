@@ -1,0 +1,80 @@
+/* Style the label to resemble a button */
+label {
+  display: inline-block;
+  /* padding: 5px; */
+  cursor: pointer;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+}
+
+input {
+  display: none;
+  /* position:fixed; */
+}
+
+
+
+/* Style the checked radio button background and text */
+input:checked+label {
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  border-radius: 50px;
+  transition: all;
+  transition-delay: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  transition: ease-in-out 0.3s;
+}
+
+.product-image:hover {
+  transform: translateY(-1px) scale(1.05);
+}
+
+.product-details1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  transition: ease-in-out 0.3s;
+  opacity: 0;
+}
+
+.product-card:hover .product-details1 {
+  opacity: 1;
+}
+
+.delete-button {
+  font-size: 14px;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  font-size: 14px;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #e74c3c !important;
+}
+
+.edit-button {
+  background-color: #3498db !important;
+}
