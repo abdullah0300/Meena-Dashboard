@@ -105,11 +105,11 @@ function Login() {
             <Link to="/">
               {" "}
               <img
-                src="https://ik.imagekit.io/2nuimwatr/WhatsApp_Image_2024-01-01_at_12.04.01_AM-removebg-preview.png?updatedAt=1704471063051"
-                alt=""
-                class="h-[75px] w-[75px]"
+            src="https://ik.imagekit.io/mctozv7td/Meena%20Bazar%20Final%20Logo%20png-02.png?updatedAt=1709073934723"
+            alt=""
+                class="h-[75px] w-[75px] bg-white rounded-pill"
               />
-            </Link>
+            </Link><br></br>
             <h3 class="text-white text-2xl font-semibold text-wrap  hidden md:block w-50 ">
               Meena Bazaar <br></br>{" "}
               <span style={{ color: "white", fontSize: "34px" }}>
