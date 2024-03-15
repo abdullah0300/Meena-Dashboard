@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DashboardNavbar from "./DashboardNavbar";
 import { Container, Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { RiDeleteBinLine } from "react-icons/ri";
 
 import { FiEdit } from "react-icons/fi";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
@@ -44,14 +43,10 @@ function AddFilter() {
 
   // hooks for post request
   const [selectedCategory, setSelectedCategory] = React.useState("");
-  const [selectedOption, setSelectedOption] = React.useState("");
-  const [typedOption, setTypedOption] = React.useState("");
-  const [optionsArray, setOptionsArray] = React.useState([]);
   const [filterName, setFilterName] = React.useState("");
-  const [filterAlternateName, setFilterAlternateName] = React.useState("");
   const [priorityNum, setPriorityNum] = React.useState(1);
   const [showInNavbar, setShowInNavbar] = React.useState("true");
-  const [showInFilterbar, setShowInFilterbar] = React.useState("true");
+  const [showInFilterbar, setShowInFilterbar] = React.useState("false");
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadImg, setUploadImg] = useState(false);
 
@@ -74,7 +69,7 @@ function AddFilter() {
         // alert("successfully uploaded image!");
         // return 'success';
         toast.update(id, {
-          render: "Uploaded Filter Image Successfully!",
+          render: "Uploaded Sub-Collection Image Successfully!",
           type: "success",
           isLoading: false,
           autoClose: 2000,
@@ -87,7 +82,7 @@ function AddFilter() {
         toast.update(id, {
           render:
             err.response?.data?.message ||
-            "Filter Image Upload Error! See more using console!",
+            "Image Upload Error! See more using console!",
           type: "error",
           isLoading: false,
           autoClose: 3000,
@@ -107,12 +102,10 @@ function AddFilter() {
 
     const payload = {
       name: filterName,
-      alternateName: filterAlternateName,
       priority: priorityNum,
       categoryId: selectedCategory,
       showNavbar: showInNavbar === "true" ? true : false,
       showFilterbar: showInFilterbar === "true" ? true : false,
-      options: optionsArray,
     };
 
     axios
@@ -122,19 +115,16 @@ function AddFilter() {
         // setIsLoadingState(false);
         console.log(res.data);
         toast.update(id, {
-          render: "Created Filter Successfully",
+          render: "Created Sub Collection Successfully",
           type: "success",
           isLoading: false,
           autoClose: 3000,
         });
-        setSelectedOption("");
         setFilterName("");
-        setFilterAlternateName("");
         setPriorityNum(1);
-        setShowInFilterbar("true");
+        setShowInFilterbar("false");
         setShowInNavbar("true");
         setSelectedCategory("");
-        setOptionsArray([]);
       })
       .catch((err) => {
         console.log(err);
@@ -157,7 +147,7 @@ function AddFilter() {
       <div>
         <div class=" mt-24 absolute lg:left-[260px] z-5">
           <Container class="">
-            <h2 class="font-bold text-xl">Add Filter</h2>
+            <h2 class="font-bold text-xl">Add Sub Collection</h2>
             <Row class="">
               <Col md={4}>
                 <Form.Group as={Col} controlId="" sm={4} className=" mt-3">
@@ -266,7 +256,7 @@ function AddFilter() {
                   <Row className="mb-3 lg:px-16 mt-3">
                     <Form.Group as={Col} controlId="">
                       <Form.Label class="text-[#707070] font-semibold py-2">
-                        Select Category
+                        Select Collection
                       </Form.Label>
                       <Form.Select
                         onChange={(e) => setSelectedCategory(e.target.value)}
@@ -292,7 +282,7 @@ function AddFilter() {
                       />
                     </Form.Group>
 
-                    <Form.Group as={Col} controlId="">
+                    {/* <Form.Group as={Col} controlId="">
                       <Form.Label class="text-[#707070]  font-semibold py-2">
                         Alternate Name
                       </Form.Label>
@@ -301,7 +291,7 @@ function AddFilter() {
                         value={filterAlternateName}
                         onChange={(e) => setFilterAlternateName(e.target.value)}
                       />
-                    </Form.Group>
+                    </Form.Group> */}
                   </Row>
 
                   <Row className="mb-3 lg:px-16 mt-3">
@@ -346,7 +336,7 @@ function AddFilter() {
                     </Form.Group>
                   </Row>
 
-                  <Row className="mb-3 lg:px-16 mt-3">
+                  {/* <Row className="mb-3 lg:px-16 mt-3">
                     <Form.Group as={Col} controlId="" md={2}>
                       <Form.Label class="text-[#707070]  font-semibold py-2">
                         New Options
@@ -412,7 +402,7 @@ function AddFilter() {
                         <RiDeleteBinLine class="text-[#707070] mt-[1rem] text-2xl" />
                       </button>
                     </Form.Group>
-                  </Row>
+                  </Row> */}
                 </Form>
               </Col>
             </Row>
@@ -425,7 +415,7 @@ function AddFilter() {
           </Container>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

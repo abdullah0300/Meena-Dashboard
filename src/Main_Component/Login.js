@@ -105,11 +105,12 @@ function Login() {
             <Link to="/">
               {" "}
               <img
-            src="https://ik.imagekit.io/mctozv7td/Meena%20Bazar%20Final%20Logo%20png-02.png?updatedAt=1709073934723"
-            alt=""
+                src="https://ik.imagekit.io/mctozv7td/Meena%20Bazar%20Final%20Logo%20png-02.png?updatedAt=1709073934723"
+                alt=""
                 class="h-[75px] w-[75px] bg-white rounded-pill"
               />
-            </Link><br></br>
+            </Link>
+            <br></br>
             <h3 class="text-white text-2xl font-semibold text-wrap  hidden md:block w-50 ">
               Meena Bazaar <br></br>{" "}
               <span style={{ color: "white", fontSize: "34px" }}>
@@ -219,7 +220,7 @@ function Login() {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

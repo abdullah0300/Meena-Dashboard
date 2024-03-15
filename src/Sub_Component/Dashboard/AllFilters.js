@@ -49,13 +49,13 @@ function AllFilters() {
   };
 
   const getAllCat = () => {
-    const id = toast.loading("Fetching Categories...");
+    const id = toast.loading("Fetching Collections...");
     axios
       .get(`${apiUrl}/api/v1/category`)
       .then((res) => {
         setAllCategories(res.data.data);
         toast.update(id, {
-          render: "Loaded Categories Successfully!",
+          render: "Loaded Collections Successfully!",
           type: "success",
           isLoading: false,
           autoClose: 1500,
@@ -65,13 +65,13 @@ function AllFilters() {
   };
 
   const getAllFilters = () => {
-    const id = toast.loading("Fetching Filters...");
+    const id = toast.loading("Fetching Data...");
     axios
       .get(`${apiUrl}/api/v1/filter`)
       .then((res) => {
         setAllFilters(res.data.data);
         toast.update(id, {
-          render: "Loaded Filters Successfully!",
+          render: "Loaded Data Successfully!",
           type: "success",
           isLoading: false,
           autoClose: 1500,
@@ -126,12 +126,14 @@ function AllFilters() {
       <DashboardNavbar />
       <div className="mt-24 absolute lg:left-[250px]">
         <div className="d-flex justify-between">
-          <h2 className="text-xl font-bold mb-5 text-center">All Filters</h2>
+          <h2 className="text-xl font-bold mb-5 text-center">
+            All Sub-Collections
+          </h2>
           <button
-            onClick={() => nav("/dashboard/addFilter")}
+            onClick={() => nav("/dashboard/addSubCollections")}
             className="rounded-1 p-1 font-semibold bg-[#bd9229] text-white text-[16px] position-fixed end-0 m-4"
           >
-            + Add Filter
+            + Add Sub Collection
           </button>
         </div>
         <div className="dropdown">
@@ -142,7 +144,7 @@ function AllFilters() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            {selectedCategoryName || "Select Category"}
+            {selectedCategoryName || "Select Collection"}
           </button>
           <ul className="dropdown-menu" aria-labelledby="categoryDropdown">
             {allCategories.map((cat) => (
@@ -184,7 +186,7 @@ function AllFilters() {
                         onClick={(e) => {
                           e.preventDefault();
                           nav(
-                            `/dashboard/editFilter/${selectedCategory}/${selectedCategoryName}/${el._id}`
+                            `/dashboard/SubCollections/${selectedCategory}/${selectedCategoryName}/${el._id}`
                           );
                         }}
                         className="rounded-1 p-1 w-24 font-semibold bg-[#bd9229] text-white text-[14px]"
@@ -199,7 +201,7 @@ function AllFilters() {
           ))}
         </Container>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DashboardNavbar from "./DashboardNavbar";
 import { Container, Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { RiDeleteBinLine } from "react-icons/ri";
 
 import { FiEdit } from "react-icons/fi";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
@@ -40,7 +39,6 @@ function EditFilter() {
         setPriorityNum(res.data.data.priority);
         setShowInNavbar(res.data.data.showNavbar);
         setShowInFilterbar(res.data.data.showFilterbar);
-        setOptionsArray(res.data.data.options);
       })
       .catch((err) => {
         console.log(err);
@@ -55,9 +53,6 @@ function EditFilter() {
   }, []);
 
   // hooks for post request
-  const [selectedOption, setSelectedOption] = React.useState("");
-  const [typedOption, setTypedOption] = React.useState("");
-  const [optionsArray, setOptionsArray] = React.useState([]);
   const [filterName, setFilterName] = React.useState("");
   const [filterAlternateName, setFilterAlternateName] = React.useState("");
   const [priorityNum, setPriorityNum] = React.useState(1);
@@ -86,7 +81,6 @@ function EditFilter() {
       priority: priorityNum,
       showNavbar: showInNavbar === "true" ? true : false,
       showFilterbar: showInFilterbar === "true" ? true : false,
-      options: optionsArray,
     };
 
     axios
@@ -100,7 +94,7 @@ function EditFilter() {
           isLoading: false,
           autoClose: 3000,
         });
-        nav("/dashboard/allFilters");
+        nav("/dashboard/allSubCollections");
       })
       .catch((err) => {
         console.log(err);
@@ -121,7 +115,7 @@ function EditFilter() {
       <div>
         <div class=" mt-24 absolute lg:left-[260px] z-5">
           <Container class="">
-            <h2 class="font-bold text-xl">Add Filter</h2>
+            <h2 class="font-bold text-xl">Add Sub Collection</h2>
             <Row class="">
               <Col md={4}>
                 <Form.Group as={Col} controlId="" sm={4} className=" mt-3">
@@ -230,7 +224,7 @@ function EditFilter() {
                   <Row className="mb-3 lg:px-16 mt-3">
                     <Form.Group as={Col} controlId="">
                       <Form.Label class="text-[#707070] font-semibold py-2">
-                        Select Category
+                        Select Collection
                       </Form.Label>
                       <Form.Select disabled aria-label="Default select example">
                         <option>{catName}</option>
@@ -245,17 +239,6 @@ function EditFilter() {
                         type="text"
                         value={filterName}
                         onChange={(e) => setFilterName(e.target.value)}
-                      />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="">
-                      <Form.Label class="text-[#707070]  font-semibold py-2">
-                        Alternate Name
-                      </Form.Label>
-                      <Form.Control
-                        type="text"
-                        value={filterAlternateName}
-                        onChange={(e) => setFilterAlternateName(e.target.value)}
                       />
                     </Form.Group>
                   </Row>
@@ -302,7 +285,7 @@ function EditFilter() {
                     </Form.Group>
                   </Row>
 
-                  <Row className="mb-3 lg:px-16 mt-3">
+                  {/* <Row className="mb-3 lg:px-16 mt-3">
                     <Form.Group as={Col} controlId="" md={2}>
                       <Form.Label class="text-[#707070]  font-semibold py-2">
                         New Options
@@ -368,7 +351,7 @@ function EditFilter() {
                         <RiDeleteBinLine class="text-[#707070] mt-[1rem] text-2xl" />
                       </button>
                     </Form.Group>
-                  </Row>
+                  </Row> */}
                 </Form>
               </Col>
             </Row>
@@ -381,7 +364,7 @@ function EditFilter() {
           </Container>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

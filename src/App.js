@@ -116,7 +116,7 @@ const App = () => {
                 }
               />
               <Route
-                path="/dashboard/allFilters"
+                path="/dashboard/allSubCollections"
                 element={
                   <RequireAuth>
                     <AllFilters />
@@ -124,7 +124,7 @@ const App = () => {
                 }
               />
               <Route
-                path="/dashboard/addFilter"
+                path="/dashboard/addSubCollections"
                 element={
                   <RequireAuth>
                     <AddFilter />
@@ -132,7 +132,7 @@ const App = () => {
                 }
               />
               <Route
-                path="/dashboard/editFilter/:catId/:catName/:filId"
+                path="/dashboard/SubCollections/:catId/:catName/:filId"
                 element={
                   <RequireAuth>
                     <EditFilter />

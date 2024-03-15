@@ -374,7 +374,7 @@ function EditCategory() {
                   aria-label="Default select example"
                   value={availableWholesale}
                   disabled
-                // onChange={(e) => setAvailableWholesale(e.target.value)}
+                  // onChange={(e) => setAvailableWholesale(e.target.value)}
                 >
                   <option value={"true"}>Yes</option>
                   <option value={"false"}>No (Upgrade Plan)</option>
@@ -471,7 +471,7 @@ function EditCategory() {
           </Modal.Footer>
         </Modal>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }
