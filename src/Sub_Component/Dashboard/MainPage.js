@@ -18,7 +18,8 @@ function MainPage() {
               <span>
                 <img
                   alt="img-icon"
-                  src="https://ik.imagekit.io/p2slevyg1/Group%20330.png?updatedAt=1705436503731"
+                  src="https://ik.imagekit.io/mctozv7td/user%20(2).png?updatedAt=1710503628767"
+                  width={50}
                 />
               </span>
             </div>
@@ -33,7 +34,8 @@ function MainPage() {
               <span>
                 <img
                   alt="img-icon"
-                  src="https://ik.imagekit.io/p2slevyg1/Group%20330.png?updatedAt=1705436503731"
+                  src="https://ik.imagekit.io/mctozv7td/user%20(2).png?updatedAt=1710503628767"
+                  width={50}
                 />
               </span>
             </div>
@@ -48,7 +50,8 @@ function MainPage() {
               <span>
                 <img
                   alt="img-icon"
-                  src="https://ik.imagekit.io/p2slevyg1/Group%20330.png?updatedAt=1705436503731"
+                  src="https://ik.imagekit.io/mctozv7td/user%20(2).png?updatedAt=1710503628767"
+                  width={50}
                 />
               </span>
             </div>
@@ -63,7 +66,8 @@ function MainPage() {
               <span>
                 <img
                   alt="img-icon"
-                  src="https://ik.imagekit.io/p2slevyg1/Group%20330.png?updatedAt=1705436503731"
+                  src="https://ik.imagekit.io/mctozv7td/user%20(2).png?updatedAt=1710503628767"
+                  width={50}
                 />
               </span>
             </div>
