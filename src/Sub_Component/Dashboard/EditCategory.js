@@ -439,7 +439,7 @@ function EditCategory() {
 
             <div class="flex flex-col justify-start items-start mt-3 mb-2 ">
               <button
-                class="bg-[#59A0B8] text-white px-5 lg:text-xl font-semibold  py-2 rounded "
+                class="bg-[#bd9229] text-white px-5 lg:text-xl font-semibold  py-2 rounded "
                 onClick={handleEditNewCategory}
               >
                 Submit
