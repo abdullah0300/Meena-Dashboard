@@ -206,8 +206,8 @@ function EditProduct() {
 
   React.useEffect(() => {
     const id1 = toast.loading("Fetching Product Details... Please Wait!");
-    const id2 = toast.loading("Fetching Filters... Please Wait!");
-    const id3 = toast.loading("Fetching Offers... Please Wait!");
+    const id2 = toast.loading("Fetching Sub Collections... Please Wait!");
+    // const id3 = toast.loading("Fetching Offers... Please Wait!");
 
     axios
       .get(`${apiUrl}/api/v1/product/${prodId}`)
@@ -271,27 +271,27 @@ function EditProduct() {
         });
       });
 
-    axios
-      .get(`${apiUrl}/api/v1/offer?sort=priority`)
-      .then((res) => {
-        setAllOffers(res.data.data);
-        toast.update(id3, {
-          render: "Successfully Fetched Offers!",
-          type: "success",
-          isLoading: false,
-          autoClose: 2000,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.update(id3, {
-          render:
-            err.response?.data?.message || "Error! Try Again & See Console",
-          type: "error",
-          isLoading: false,
-          autoClose: 3500,
-        });
-      });
+    // axios
+    //   .get(`${apiUrl}/api/v1/offer?sort=priority`)
+    //   .then((res) => {
+    //     setAllOffers(res.data.data);
+    //     toast.update(id3, {
+    //       render: "Successfully Fetched Offers!",
+    //       type: "success",
+    //       isLoading: false,
+    //       autoClose: 2000,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     toast.update(id3, {
+    //       render:
+    //         err.response?.data?.message || "Error! Try Again & See Console",
+    //       type: "error",
+    //       isLoading: false,
+    //       autoClose: 3500,
+    //     });
+    //   });
   }, []);
 
   // form states
@@ -606,7 +606,7 @@ function EditProduct() {
       chosenFilters.push({
         filterId: selectedFilterObj._id,
         filterName: selectedFilterObj.name,
-        chosenOption: selectedFilteredFilterOption,
+        chosenOption: "",
       });
     }
 
@@ -732,7 +732,7 @@ function EditProduct() {
                       />
                     </Form.Group>
 
-                    <Form.Group
+                    {/* <Form.Group
                       as={Col}
                       controlId=""
                       md={4}
@@ -778,7 +778,7 @@ function EditProduct() {
                           </option>
                         ))}
                       </Form.Select>
-                    </Form.Group>
+                    </Form.Group> */}
                   </Row>
 
                   <Row className="mb-3 lg:px-16 mt-3">
@@ -957,7 +957,7 @@ function EditProduct() {
 
                     <span className="mt-3 mb-0">
                       <h1>
-                        Selected Filters (
+                        Selected SubCollections (
                         {finalFiltersObjArray?.map((fil) => (
                           <span>
                             {fil.filterName}: {fil.chosenOption}
@@ -978,7 +978,7 @@ function EditProduct() {
                       style={{ marginTop: 15 }}
                     >
                       <Form.Label class="text-[#707070]  font-semibold py-2">
-                        1. Select Filters
+                        1. Select SubCollections
                       </Form.Label>
                       <Form.Select
                         onChange={(e) => {
@@ -1004,7 +1004,7 @@ function EditProduct() {
                       </Form.Select>
                     </Form.Group>
 
-                    <Form.Group
+                    {/* <Form.Group
                       as={Col}
                       controlId=""
                       md={4}
@@ -1028,7 +1028,7 @@ function EditProduct() {
                           </option>
                         ))}
                       </Form.Select>
-                    </Form.Group>
+                    </Form.Group> */}
 
                     <Form.Group as={Col} controlId="" class="flex ">
                       <Button

@@ -223,10 +223,10 @@ function AddProduct() {
   const [fetchedFilters, setFetchedFilters] = React.useState([]);
 
   React.useEffect(() => {
-    const id1 = toast.loading("Fetching Categories... Please Wait!");
-    const id2 = toast.loading("Fetching Filters... Please Wait!");
-    const id3 = toast.loading("Fetching Flavours... Please Wait!");
-    const id4 = toast.loading("Fetching Offers... Please Wait!");
+    const id1 = toast.loading("Fetching Collections... Please Wait!");
+    const id2 = toast.loading("Fetching Sub-Collections... Please Wait!");
+    // const id3 = toast.loading("Fetching Flavours... Please Wait!");
+    // const id4 = toast.loading("Fetching Offers... Please Wait!");
 
     axios
       .get(`${apiUrl}/api/v1/category`)
@@ -234,7 +234,7 @@ function AddProduct() {
         setFetchedCategories(res.data.data);
         // console.log(res.data.data);
         toast.update(id1, {
-          render: "Successfully Fetched Categories!",
+          render: "Successfully Fetched Collections!",
           type: "success",
           isLoading: false,
           autoClose: 2000,
@@ -257,7 +257,7 @@ function AddProduct() {
         // console.log(res.data);
         setFetchedFilters(res.data.data);
         toast.update(id2, {
-          render: "Successfully Fetched Filters!",
+          render: "Successfully Fetched Sub-Collections!",
           type: "success",
           isLoading: false,
           autoClose: 2000,
@@ -274,49 +274,49 @@ function AddProduct() {
         });
       });
 
-    axios
-      .get(`${apiUrl}/api/v1/flavour`)
-      .then((res) => {
-        setAllFlavours(res.data.data);
-        toast.update(id3, {
-          render: "Successfully Fetched Flavours!",
-          type: "success",
-          isLoading: false,
-          autoClose: 2000,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.update(id3, {
-          render:
-            err.response?.data?.message || "Error! Try Again & See Console",
-          type: "error",
-          isLoading: false,
-          autoClose: 3500,
-        });
-      });
+    // axios
+    //   .get(`${apiUrl}/api/v1/flavour`)
+    //   .then((res) => {
+    //     setAllFlavours(res.data.data);
+    //     toast.update(id3, {
+    //       render: "Successfully Fetched Flavours!",
+    //       type: "success",
+    //       isLoading: false,
+    //       autoClose: 2000,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     toast.update(id3, {
+    //       render:
+    //         err.response?.data?.message || "Error! Try Again & See Console",
+    //       type: "error",
+    //       isLoading: false,
+    //       autoClose: 3500,
+    //     });
+    //   });
 
-    axios
-      .get(`${apiUrl}/api/v1/offer`)
-      .then((res) => {
-        setAllOffers(res.data.data);
-        toast.update(id4, {
-          render: "Successfully Fetched Offers!",
-          type: "success",
-          isLoading: false,
-          autoClose: 2000,
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.update(id4, {
-          render:
-            err.response?.data?.message || "Error! Try Again & See Console",
-          type: "error",
-          isLoading: false,
-          autoClose: 3500,
-        });
-      });
+    // axios
+    //   .get(`${apiUrl}/api/v1/offer`)
+    //   .then((res) => {
+    //     setAllOffers(res.data.data);
+    //     toast.update(id4, {
+    //       render: "Successfully Fetched Offers!",
+    //       type: "success",
+    //       isLoading: false,
+    //       autoClose: 2000,
+    //     });
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     toast.update(id4, {
+    //       render:
+    //         err.response?.data?.message || "Error! Try Again & See Console",
+    //       type: "error",
+    //       isLoading: false,
+    //       autoClose: 3500,
+    //     });
+    //   });
   }, []);
 
   // form states
@@ -612,7 +612,7 @@ function AddProduct() {
       chosenFilters.push({
         filterId: selectedFilterObj._id,
         filterName: selectedFilterObj.name,
-        chosenOption: selectedFilteredFilterOption,
+        chosenOption: "",
       });
     }
 
@@ -1046,7 +1046,7 @@ function AddProduct() {
                       style={{ marginTop: 15 }}
                     >
                       <Form.Label class="text-[#707070]  font-semibold py-2">
-                        1. Select Filters
+                        1. Select Sub Collection
                       </Form.Label>
                       <Form.Select
                         onChange={(e) => {
@@ -1072,7 +1072,7 @@ function AddProduct() {
                       </Form.Select>
                     </Form.Group>
 
-                    <Form.Group
+                    {/* <Form.Group
                       as={Col}
                       controlId=""
                       md={4}
@@ -1096,7 +1096,7 @@ function AddProduct() {
                           </option>
                         ))}
                       </Form.Select>
-                    </Form.Group>
+                    </Form.Group> */}
 
                     <Form.Group as={Col} controlId="" class="flex ">
                       <Button
