@@ -36,7 +36,7 @@ function Register() {
             </Link>
 
             <h3 class="text-white text-2xl font-semibold text-wrap  hidden md:block w-50 ">
-              Welcome to Vaping CIRCLE!
+              Welcome to Meena Bazaar!
             </h3>
           </div>
 
