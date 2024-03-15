@@ -399,7 +399,7 @@ function EditFlavour() {
           </Container>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

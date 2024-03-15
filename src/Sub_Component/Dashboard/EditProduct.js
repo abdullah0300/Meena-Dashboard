@@ -695,24 +695,24 @@ function EditProduct() {
                       <Form.Select
                         aria-label="Default select example"
                         disabled
-                      // onChange={(e) => {
-                      //   setSelectedCategory(() => {
-                      //     const changedCat = e.target.value;
-                      //     const newFilters = fetchedFilters.filter(
-                      //       (f) => f.categoryId === changedCat
-                      //     );
-                      //     const finalFiltersArray = newFilters?.map((f) => {
-                      //       return {
-                      //         filterId: f._id,
-                      //         filterName: f.name,
-                      //         chosenOption: "",
-                      //       };
-                      //     });
-                      //     setFilteredFilters(newFilters);
-                      //     setFinalFiltersObjArray(finalFiltersArray);
-                      //     return changedCat;
-                      //   });
-                      // }}
+                        // onChange={(e) => {
+                        //   setSelectedCategory(() => {
+                        //     const changedCat = e.target.value;
+                        //     const newFilters = fetchedFilters.filter(
+                        //       (f) => f.categoryId === changedCat
+                        //     );
+                        //     const finalFiltersArray = newFilters?.map((f) => {
+                        //       return {
+                        //         filterId: f._id,
+                        //         filterName: f.name,
+                        //         chosenOption: "",
+                        //       };
+                        //     });
+                        //     setFilteredFilters(newFilters);
+                        //     setFinalFiltersObjArray(finalFiltersArray);
+                        //     return changedCat;
+                        //   });
+                        // }}
                       >
                         <option>{catName}</option>
                         {/* {fetchedCategories?.map((cat) => (
@@ -1177,7 +1177,7 @@ function EditProduct() {
           </Container>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

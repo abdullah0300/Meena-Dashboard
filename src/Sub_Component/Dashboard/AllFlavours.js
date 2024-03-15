@@ -153,7 +153,7 @@ function AllFlavour() {
           </Container>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }
