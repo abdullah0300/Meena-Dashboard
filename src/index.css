@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.try {
+    background-image: url('https://ik.imagekit.io/mctozv7td/create_a_banner_for_jewellery_website_which_has_%20(6).jpg?updatedAt=1710499992331');
+    /* Replace 'your-image-url.jpg' with the URL or path to your image */
+    background-size: cover;
+    /* This ensures the image covers the entire background */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-color: #bd9229;
+    /* Fallback color if the image is not available or doesn't cover the entire background */
+    margin: 0;
+    padding: 0;
+}

@@ -101,7 +101,7 @@ function Login() {
       {/* About Start */}
       <div className="container-fluid ">
         <div className="row">
-          <div className="col-lg-6 bg-[#bd9229] p-4 h-screen hidden md:block">
+          <div className="col-lg-6 bg-[#bd9229] try p-4 h-screen hidden md:block">
             <Link to="/">
               {" "}
               <img
@@ -120,12 +120,12 @@ function Login() {
           </div>
 
           <div className="col-lg-6 rounded-[24px] lg:ml-[-90px] p-2 md:pt-5 md:pb-5 bg-white  z-0 relative flex flex-col justify-center item-center">
-            <img
+            {/* <img
               src="https://ik.imagekit.io/p2slevyg1/41098deb-a489-4df6-acd5-55e3bb05f5cb-removebg-preview.png?updatedAt=1705433981054"
               alt=""
               class="w-[350px] h-[450px] lg:ml-[300px] z-[1000] absolute  mt-44 bottom-5 right-[90%] hidden md:block"
               style={{ zIndex: 1000 }}
-            />
+            /> */}
             <h3 class=" text-3xl font-bold text-center pt-5 pl-2 md:pl-[5rem] pb-4">
               Log In
             </h3>
