@@ -124,9 +124,12 @@ function DashboardNavbar({ setQuery, handleSearchClick, query }) {
                     >
                       Collections
                     </Nav.Link>
-                    {/* <Nav.Link href="/dashboard/allFilter" class="mb-3 text-xl">
+                    <Nav.Link
+                      href="/dashboard/allSubCollections"
+                      class="mb-3 text-xl"
+                    >
                       Filters
-                    </Nav.Link> */}
+                    </Nav.Link>
                     <Nav.Link href="/dashboard/allProduct" class="mb-3 text-xl">
                       Products
                     </Nav.Link>
@@ -203,23 +206,23 @@ function DashboardNavbar({ setQuery, handleSearchClick, query }) {
           </p>
         </div>
 
-        {/* <div className="d-flex text-white flex-row w-48 gap-3">
+        <div className="d-flex text-white flex-row w-48 gap-3">
           <p
             className="flex items-center gap-2  w-48 text-base text-white hover:text-black  p-3
             focus-within:bg-white border-y border-[#bd9229]"
             style={{ marginLeft: -48 }}
           >
             <NavLink
-              to="/dashboard/allFilters"
+              to="/dashboard/allSubCollections"
               className="flex hover:text-black align-baseline"
             >
               <span className="mr-4 py-1">
                 <IoGridSharp />
               </span>
-              <span>Filters</span>
+              <span>Sub Collections</span>
             </NavLink>
           </p>
-        </div> */}
+        </div>
 
         <div className="d-flex flex-row w-48 gap-3">
           <p

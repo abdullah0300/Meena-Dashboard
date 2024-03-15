@@ -31,11 +31,11 @@ function AddCategory() {
     setSelectedFile2(file2);
   };
 
-  const handleUploadCategoryImage = (cId) => {
+  const handleUploadCategoryImage = async (cId) => {
     let formData = new FormData();
     formData.append("image", selectedFile);
 
-    return axios
+    return await axios
       .post(`${apiUrl}/api/v1/category/imageUpload?categoryId=${cId}`, formData)
       .then((res) => {
         console.log(res.data);
@@ -79,11 +79,11 @@ function AddCategory() {
 
     axios
       .post(`${apiUrl}/api/v1/category`, payload, config)
-      .then((res) => {
+      .then(async (res) => {
         // setIsLoadingState(false);
         console.log(res.data);
         if (uploadingImage) {
-          if (handleUploadCategoryImage(res.data.data._id)) {
+          if (await handleUploadCategoryImage(res.data.data._id)) {
             toast.update(id, {
               render: "Created Category Successfully & Uploaded Image",
               type: "success",
