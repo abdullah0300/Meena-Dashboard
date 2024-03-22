@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import "./allproduct.css";
 import DashboardNavbar from "./DashboardNavbar";
 import axios from "axios";
 import { apiUrl } from "../../data/env";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { MdDeleteForever } from "react-icons/md";
 
 function chunkArray(array, size) {
   const chunkedArray = [];
@@ -165,10 +166,17 @@ function AllFilters() {
         </div>
         <Container fluid className="my-5">
           {chunkedArr?.map((four, rowIndex) => (
-            <div key={rowIndex} className=" mb-3">
+            <Row key={rowIndex} className=" mb-3">
               {four.map((el) => (
-                <div key={el._id} className="border p-3 rounded mb-2">
+                <Col key={el._id} className="border p-3 rounded mb-2">
                   <div className="d-flex flex-column gap-3">
+                    <img
+                      style={{ width: "18rem", height: "14rem" }}
+                      src={el.image?.url || ""}
+                      loading="lazy"
+                      alt={el.name}
+                      className="category-image"
+                    />
                     <p className="text-black font-semibold text-[12px]">
                       {el.name}
                     </p>
@@ -195,9 +203,9 @@ function AllFilters() {
                       </button>
                     </div>
                   </div>
-                </div>
+                </Col>
               ))}
-            </div>
+            </Row>
           ))}
         </Container>
       </div>
