@@ -264,7 +264,10 @@ function AllProducts() {
                                 onClick={(e) => {
                                   e.preventDefault();
                                   nav(
-                                    `/dashboard/editProduct/${selectedCategory}/${selectedCategoryName}/${el._id}`
+                                    `/dashboard/editProduct/${selectedCategory}/${selectedCategoryName.replaceAll(
+                                      "/",
+                                      "@"
+                                    )}/${el._id}`
                                   );
                                 }}
                                 className="rounded-1 p-1 w-24 font-semibold bg-[#bd9229] text-white text-[14px] edit-button"

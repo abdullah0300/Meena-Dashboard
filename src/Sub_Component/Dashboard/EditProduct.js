@@ -188,6 +188,7 @@ function VariantOption({ variantOptionsObj, selectedVariant, i, pId }) {
 
 function EditProduct() {
   const { prodId, catName, catId } = useParams();
+  const categoryName = catName.replaceAll("@", "/");
 
   const nav = useNavigate();
 
@@ -714,7 +715,7 @@ function EditProduct() {
                         //   });
                         // }}
                       >
-                        <option>{catName}</option>
+                        <option>{categoryName}</option>
                         {/* {fetchedCategories?.map((cat) => (
                           <option value={cat._id}>{cat.name}</option>
                         ))} */}

@@ -194,7 +194,12 @@ function AllFilters() {
                         onClick={(e) => {
                           e.preventDefault();
                           nav(
-                            `/dashboard/SubCollections/${selectedCategory}/${selectedCategoryName}/${el._id}`
+                            `/dashboard/SubCollections/${selectedCategory.replaceAll(
+                              "/",
+                              "@"
+                            )}/${selectedCategoryName.replaceAll("/", "@")}/${
+                              el._id
+                            }`
                           );
                         }}
                         className="rounded-1 p-1 w-24 font-semibold bg-[#bd9229] text-white text-[14px]"
