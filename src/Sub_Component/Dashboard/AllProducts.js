@@ -237,15 +237,10 @@ function AllProducts() {
                             el.coverImage?.url?.replace(
                               "/product",
                               "/tr:ar-1-1,w-285.5/product"
-                            ) ||
-                            el.coverImage?.replace(
-                              "/product",
-                              "/tr:ar-1-1,w-285.5/product"
-                            ) ||
-                            ""
+                            ) || ""
                           }
                           loading="lazy"
-                          alt=""
+                          alt={el.name}
                           className="product-image"
                         />
                         <div className="product-details1">
