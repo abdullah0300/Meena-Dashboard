@@ -14,6 +14,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function EditFilter() {
   const { filId, catId, catName } = useParams();
+  const filterId = filId.replaceAll("@", "/");
+  const categoryName = catName.replaceAll("@", "/");
 
   const nav = useNavigate();
 
@@ -24,7 +26,7 @@ function EditFilter() {
     const id = toast.loading("Fetching Data... Please Wait!");
 
     axios
-      .get(`${apiUrl}/api/v1/filter/${filId}`)
+      .get(`${apiUrl}/api/v1/filter/${filterId}`)
       .then((res) => {
         // setFetchedFilter(res.data.data);
         toast.update(id, {
@@ -84,7 +86,7 @@ function EditFilter() {
     };
 
     axios
-      .patch(`${apiUrl}/api/v1/filter/${filId}`, payload, config)
+      .patch(`${apiUrl}/api/v1/filter/${filterId}`, payload, config)
       .then((res) => {
         // setIsLoadingState(false);
         console.log(res.data);
@@ -227,7 +229,7 @@ function EditFilter() {
                         Select Collection
                       </Form.Label>
                       <Form.Select disabled aria-label="Default select example">
-                        <option>{catName}</option>
+                        <option>{categoryName}</option>
                       </Form.Select>
                     </Form.Group>
 
