@@ -102,25 +102,13 @@ function AllCategory() {
             {chunkedArr?.map((chunk, index) => (
               <Row className="mb-4" key={index}>
                 {chunk.map((cat) => {
-                  let url = "";
-                  if (cat.image.url)
-                    url = cat.image.url.replace(
-                      "/category",
-                      "/tr:ar-1-1,w-285.5/category"
-                    );
-                  else if (cat.image)
-                    url = cat.image.replace(
-                      "/category",
-                      "/tr:ar-1-1,w-285.5/category"
-                    );
-                  else url = "";
                   return (
                     <Col key={cat._id}>
-                      <div className="card md:w-[15rem] w-[12rem]" >
+                      <div className="card md:w-[15rem] w-[12rem]">
                         <div className=" m-2  relative image-container ">
                           <img
                             style={{ width: "18rem", height: "14rem" }}
-                            src={url}
+                            src={cat.image?.url || ""}
                             loading="lazy"
                             alt={cat.name}
                             className="category-image"
